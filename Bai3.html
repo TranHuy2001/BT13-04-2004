@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 3. Nhập số nguyên bất kỳ và in ra kết quả ra màn hình để cho người dùng biết số đó là lớn hay nhỏ hơn 0</p>
+<p>Nhập một số nguyên bất kỳ:</p>
+<input type="number" id="number" placeholder="nhập số nguyên bất kỳ">
+<button onclick="getData()">Xem</button>
+<p id="kq"></p>
+</body>
+<script>
+    function getData() {
+        let number = document.getElementById("number").value;
+
+        if (number < 0) {
+            document.getElementById("kq").innerHTML = "<p>Số nguyên này nhỏ hơn 0</p>"
+        } else {
+            document.getElementById("kq").innerHTML = "<p>Số nguyên này lớn hơn 0</p>"
+        }
+    }
+</script>
+</html>

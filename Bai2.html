@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 2. Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10</p>
+<p>Nhập tuổi của học sinh</p>
+<input type="number" id="age" placeholder="age" value="">
+<button onclick="getData()">Xem</button>
+<p id="kq"></p>
+</body>
+<script>
+    function getData() {
+    // let tuoi = +prompt('Nhập tuổi của học sinh: ');
+        let tuoi = document.getElementById("age").value;
+
+    if(tuoi < 15) {
+        document.getElementById("kq").innerHTML = "<p>Học sinh không đủ tuổi vào lớp 10</p>";
+    } else {
+        document.getElementById("kq").innerHTML = "<p>Học sinh đủ tuổi vào lớp 10</p>";
+    }
+    }
+</script>
+</html>

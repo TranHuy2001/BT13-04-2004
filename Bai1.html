@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 1. Nhập vào hai số a và b, kiểm tra xem a có chia hết cho b hay không</p>
+<p>Nhập số a:</p>
+<input type="number" id="a">
+<p>Nhập số b:</p>
+<input type="number" id="b"> <br>
+<button onclick="getData()">Xem</button>
+<p id="kq"></p>
+</body>
+<script>
+    function getData() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+
+        if (a % b === 0) {
+            document.getElementById("kq").innerHTML ="<p>a chia hết cho b</p>";
+        } else {
+            document.getElementById("kq").innerHTML ="<p>a không chia hết cho b</p>";
+        }
+    }
+</script>
+</html>

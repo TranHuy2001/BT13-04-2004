@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Bài 5. Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra , điểm thi giữa kỳ , điểm thi cuối kỳ</p>
+<p>Nhập điểm kiểm tra</p>
+<input type="number" id="diemKiemTra" placeholder="Điểm kiểm tra" value="">
+<p>Nhập điểm thi giữa kỳ</p>
+<input type="number" id="diemThiGiuaKy" placeholder="Điểm thi giữa kỳ" value="">
+<p>Nhập điểm thi cuối kỳ</p>
+<input type="number" id="diemThiCuoiKy" placeholder="Điểm thi cuối kỳ" value="">
+<button onclick="getData()">
+    Xem
+</button>
+<p id="kq"></p>
+</body>
+<script>
+    // let diemKiemTra = 7;
+    // let diemGiuaKy = 8;
+    // let diemCuoiKy = 9;
+    //
+    // let diemTrungBinh = (diemKiKiemTra + diemGiuaKy + 2*diemCuoiKy)/4;
+    // let xepLoai = '';
+    //
+    // if(diemTrungBinh < 5){
+    //     xepLoai = 'Yếu';
+    // } else if (diemTrungBinh < 6.5) {
+    //     xepLoai = 'Trung bình';
+    // } else if (diemTrungBinh < 8) {
+    //     xepLoai = 'Khá';
+    // } else {
+    //     xepLoai = 'Giỏi';
+    // }
+    //
+    // console.log("Xếp loại học lực: " + xepLoai);
+    function getData() {
+        let diemKiemTra = document.getElementById("diemKiemTra").value;
+        let diemThiGiuaKy = document.getElementById("diemThiGiuaKy").value;
+        let diemThiCuoiKy = document.getElementById("diemThiCuoiKy").value;
+
+        let diemTrungBinh = (diemKiemTra + diemThiGiuaKy + 2*diemThiCuoiKy)/4;
+        let xepLoai = '';
+
+        if(diemTrungBinh < 5){
+                xepLoai = 'Yếu';
+            } else if (diemTrungBinh < 6.5) {
+                xepLoai = 'Trung bình';
+            } else if (diemTrungBinh < 8) {
+                xepLoai = 'Khá';
+            } else {
+                xepLoai = 'Giỏi';
+            }
+
+        document.getElementById("kq").innerHTML = "Xếp loại học lực: " + xepLoai;
+    }
+</script>
+</html>
